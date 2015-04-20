@@ -8,6 +8,7 @@ odg = "egrgwrfgw"
 tocke = 0
 poskus = 3
 
+
 def r_high_score():
     high_score_fi = open("high_score.txt", "r")
     high_score = int(high_score_fi.read())
@@ -27,8 +28,8 @@ while odg != "ne":
         drzava = random.choice(ugm.keys())
         odg = raw_input("Želiš uganiti glavno mesto države? (da/ne) ")
         if odg == "da":
-            odg2 = raw_input(drzava + ": ")
-            if odg2 == ugm[drzava]:
+            odg2 = raw_input(drzava + ": ").lower()
+            if odg2 == ugm[drzava].lower():
                 tocke += 1
                 print("Obvladaš glavna mesta, odgovor je pravilen!")
                 print("Vaš rezultat je %s." % tocke)
